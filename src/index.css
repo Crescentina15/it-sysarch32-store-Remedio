@@ -1,68 +1,164 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* index.css */
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
+/* Global styles */
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  background-color: #f0f0f0; /* Set background color */
+  margin: 0; /* Remove default margin */
+  font-family: Arial, sans-serif; /* Set default font family */
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Styles for the title */
+.Title {
+  text-align: center;
+  font-family: 'URW Chancery L', cursive;
+  font-size: 30px;
+  margin-bottom: 20px; /* Add some space below the title */
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+/* Styles for the navbar */
+.navbar {
+  background-color: #333; /* Set navbar background color */
+  color: white; /* Set navbar text color */
+  padding: 10px 20px; /* Add padding to navbar */
+}
+
+/* Styles for the banner */
+.bannerHolder {
+  text-align: center; /* Center-align banner */
+  margin-bottom: 20px; /* Add some space below the banner */
+}
+
+.bannerImage {
+  width: 100%; /* Make banner image responsive */
+  max-height: 500px; /* Set max height for the banner */
+}
+
+/* Styles for product holder */
+.product-holder {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 30px;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+/* Styles for individual product item */
+.product-item {
+  background-color: white; /* Set background color for product items */
+  padding: 20px; /* Add padding to product items */
+  border-radius: 10px; /* Add rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+  position: relative; /* Set position to relative */
+}
+
+.product-item img {
+  max-width: 100%;
+  max-height: 200px;
+  display: block;
+  margin: 0 auto; /* Center-align images */
+  border-radius: 5px; /* Add rounded corners to images */
+  transition: transform 0.3s ease; /* Add transition effect */
+}
+
+.product-item:hover img {
+  transform: scale(1.1); /* Enlarge image on hover */
+}
+
+.product-details {
+  margin-top: 10px; /* Add space between image and details */
+  text-align: center; /* Center-align product details */
+}
+
+.name {
+  font-weight: bold; /* Make product name bold */
+}
+
+.price {
+  color: #888; /* Set color for product price */
+}
+
+/* Styles for the button container */
+.button-container {
+  position: absolute; /* Position the button container */
+  top: 50%; /* Align the button container vertically */
+  left: 50%; /* Align the button container horizontally */
+  transform: translate(-50%, -50%); /* Center the button container */
+  opacity: 0; /* Hide the button container by default */
+  transition: opacity 0.3s ease; /* Add transition effect */
+}
+
+.product-item:hover .button-container {
+  opacity: 1; /* Show the button container when the image is hovered */
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 5px 10px; /* Reduce button padding */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px; /* Reduce button font size */
+  border-radius: 5px;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Styles for expanded image */
+.expanded-image {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+}
+
+.expanded-image img {
+  max-width: 80vw; /* Adjust max width for expanded image */
+  max-height: 80vh; /* Adjust max height for expanded image */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Styles for the cart */
+.cart {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.cart h2 {
+  text-align: center;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cart-item-image {
+  width: 80px; /* Adjust width of cart item images */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Add rounded corners */
+}
+
+.cart-item-details {
+  margin-left: 10px; /* Add space between image and details */
+}
+
+.cart-item-name {
+  font-weight: bold;
+}
+
+.cart-item-price {
+  color: #888; /* Set color for price */
 }
