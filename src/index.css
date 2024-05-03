@@ -2,11 +2,12 @@
 
 /* Global styles */
 body {
-  background-color: #f0f0f0; /* Set background color */
-  margin: 0; /* Remove default margin */
-  font-family: Arial, sans-serif; /* Set default font family */
+  background-image: url('https://st2.depositphotos.com/2124221/46848/i/450/depositphotos_468487086-stock-photo-abstract-multicolored-background-poly-pattern.jpg');
+  background-size: cover; /* Cover the entire viewport */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the background image */
+  font-family: Arial, sans-serif; /* Use Arial font family */
 }
-
 /* Styles for the title */
 .Title {
   text-align: center;
