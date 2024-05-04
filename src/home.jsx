@@ -108,6 +108,20 @@ function Home() {
       name: 'Queen of Tears Tee Shirts',
       price: '₱159.00',
     },
+    {
+      id: 9,
+      imageUrl:
+        'https://i.mydramalist.com/QJpqZv_2f.png',
+      name: 'Hong Hae-in',
+      price: '₱100000.00',
+    },
+    {
+      id: 10,
+      imageUrl:
+        'https://www.pinkvilla.com/images/2024-03/1973927448_copy-of-cms-lead-image-1.jpg',
+      name: 'Baek Hyun-woo',
+      price: '₱100000.00',
+    },
   ];
 
   return (
